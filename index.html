@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Астрологические и психологические консультации для личного роста и развития бизнеса. Индивидуальный подход, глубокие инсайты и поддержка на пути трансформации." />
+  <meta name="keywords" content="астрология, консультация, астролог, психология, бизнес-астрология, личный рост, карьера" />
+  <meta name="author" content="Анна" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Life in Astro — Астрология и психология для личного роста" />
+  <meta property="og:description" content="Индивидуальные консультации для тех, кто ищет опору, смысл и глубинное понимание себя." />
+  <meta property="og:image" content="assets/images/hero-bg.png" />
+  <meta property="og:type" content="website" />
+  <title>Life in Astro – Астрология &amp; Психология</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-mM9xvzjBqld+zy8Q8j0DWPdtuql2GP8X8nC5pNCLGUEzKi2Q8cgc32Z8BK+62tW70Gj5kTJLsx3KZpR2dZdqJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link" tabindex="0">Перейти к содержимому</a>
+
+  <header class="site-header" role="banner">
+    <nav aria-label="Главная навигация">
+      <div class="logo">Life in Astro</div>
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <span class="sr-only">Меню</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="#services" data-i18n="navServices">Услуги</a></li>
+        <li><a href="#quiz" data-i18n="navQuiz">Квиз</a></li>
+        <li><a href="#about" data-i18n="navAbout">Обо мне</a></li>
+        <li><a href="#testimonials" data-i18n="navTestimonials">Отзывы</a></li>
+        <li><a href="#blog" data-i18n="navBlog">Блог</a></li>
+        <li><a href="#contact" data-i18n="navContact">Контакты</a></li>
+      </ul>
+      <!-- Language toggle -->
+      <div class="lang-toggle" role="group" aria-label="Выбор языка">
+        <button id="lang-ru" class="lang-btn active" lang="ru" aria-label="Русский">RU</button>
+        <button id="lang-en" class="lang-btn" lang="en" aria-label="English">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-overlay"></div>
+      <img src="assets/images/hero-bg.png" alt="Тёплый звёздный пейзаж с луной" class="hero-bg" />
+      <div class="hero-content">
+        <h1 data-i18n="heroTitle">Астрология и психология для самопознания</h1>
+        <p data-i18n="heroSubtitle">Преобразите свою жизнь и бизнес благодаря астрологическим инсайтам.</p>
+        <a href="https://forms.gle/uXqtAvbuG2G3pk5z7" class="btn cta" data-i18n="heroCTA" target="_blank" rel="noopener">Записаться</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <h2 data-i18n="servicesTitle">Консультации</h2>
+      <p class="section-intro" data-i18n="servicesIntro">Выберите консультацию, которая подходит именно вам. Мы предлагаем классические астрологические услуги и уникальные индивидуальные форматы.</p>
+      <div id="services-container" class="services-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+      <h2 data-i18n="quizTitle">Квиз: Что говорит о вас ваша Луна?</h2>
+      <p class="section-intro" data-i18n="quizIntro">Ответьте на несколько простых вопросов, чтобы узнать, какую консультацию стоит выбрать.</p>
+      <form id="astro-quiz" aria-describedby="quizDescription">
+        <p id="quizDescription" class="sr-only" data-i18n="quizDescription">Этот тест поможет понять, как Луна влияет на ваши качества и потребности.</p>
+        <!-- Question 1 -->
+        <fieldset class="quiz-question">
+          <legend data-i18n="quizQ1">Как вы предпочитаете проводить время после долгого дня?</legend>
+          <label><input type="radio" name="q1" value="A" required /> <span data-i18n="quizQ1A">С семьёй и друзьями</span></label>
+          <label><input type="radio" name="q1" value="B" /> <span data-i18n="quizQ1B">За книгой или фильмом</span></label>
+          <label><input type="radio" name="q1" value="C" /> <span data-i18n="quizQ1C">В одиночестве, в тишине</span></label>
+        </fieldset>
+        <!-- Question 2 -->
+        <fieldset class="quiz-question">
+          <legend data-i18n="quizQ2">Что для вас важнее всего сейчас?</legend>
+          <label><input type="radio" name="q2" value="A" required /> <span data-i18n="quizQ2A">Карьерный рост и бизнес</span></label>
+          <label><input type="radio" name="q2" value="B" /> <span data-i18n="quizQ2B">Отношения и семья</span></label>
+          <label><input type="radio" name="q2" value="C" /> <span data-i18n="quizQ2C">Личное развитие и вдохновение</span></label>
+        </fieldset>
+        <!-- Question 3 -->
+        <fieldset class="quiz-question">
+          <legend data-i18n="quizQ3">Как вы реагируете на стресс?</legend>
+          <label><input type="radio" name="q3" value="A" required /> <span data-i18n="quizQ3A">Берусь за работу и решаю проблемы</span></label>
+          <label><input type="radio" name="q3" value="B" /> <span data-i18n="quizQ3B">Обращаюсь за поддержкой к близким</span></label>
+          <label><input type="radio" name="q3" value="C" /> <span data-i18n="quizQ3C">Ухожу в себя и ищу ответы внутри</span></label>
+        </fieldset>
+        <button type="submit" class="btn" data-i18n="quizSubmit">Узнать результат</button>
+      </form>
+      <div id="quiz-result" class="quiz-result" aria-live="polite"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <h2 data-i18n="aboutTitle">Обо мне</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p data-i18n="aboutP1">Меня зовут Анна. Я бухгалтер с 14‑летним опытом, который осознанно выбрал путь астролога. Моя миссия — помочь людям найти опору и смысл в период перемен.</p>
+          <p data-i18n="aboutP2">Я изучаю астрологию и психоанализ, создавая авторскую методику, объединяющую символизм и практичные рекомендации для предпринимателей, блогеров и всех, кто стоит на распутье.</p>
+          <p data-i18n="aboutP3">Моё вдохновение — соединять высокие технологии и природную гармонию. В каждой консультации я стремлюсь пробудить внутреннюю силу и веру в собственный путь.</p>
+        </div>
+        <div class="about-images">
+          <img src="assets/images/about-portrait.png" alt="Силуэт женщины с цветами и звёздами" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <h2 data-i18n="testimonialsTitle">Отзывы клиентов</h2>
+      <div class="testimonials-grid">
+        <figure class="testimonial">
+          <blockquote data-i18n="testimonial1">«Анна помогла мне увидеть свои сильные стороны и понять, куда двигаться дальше. После консультации я чувствую себя уверенно и спокойно».</blockquote>
+          <figcaption>— Мария, дизайнер</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote data-i18n="testimonial2">«Благодаря Ане я нашёл баланс между работой и личной жизнью. Её подход к астрологии и психологии — настоящий дар».</blockquote>
+          <figcaption>— Алексей, предприниматель</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <img src="assets/images/about-portrait.png" alt="Фото довольного клиента" />
+          <blockquote data-i18n="testimonial3">«Консультация с Анной открыла мне глаза на собственные ресурсы и возможности. Рекомендую всем, кто на распутье».</blockquote>
+          <figcaption>— Елена, маркетолог</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <img src="assets/images/about-portrait.png" alt="Фото счастливого клиента" />
+          <blockquote data-i18n="testimonial4">«Я долго искал ответ на один важный вопрос и получил его благодаря консультации. Всё встало на свои места».</blockquote>
+          <figcaption>— Иван, стартапер</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+      <h2 data-i18n="blogTitle">Блог</h2>
+      <article class="blog-post">
+        <img src="assets/images/blog-eclipse.png" alt="Абстракция солнечного затмения" class="blog-thumb" />
+        <div class="blog-content">
+          <h3 data-i18n="blogPostTitle">Коридор затмений: что важно знать</h3>
+          <p data-i18n="blogExcerpt">Период между солнечным и лунным затмениями называют коридором затмений. В это время энергии особенно мощные, а эмоциональный фон нестабилен. Мы рассказываем, как прожить этот период осознанно, что стоит учесть и как использовать возможности для трансформации.</p>
+          <a href="#" class="btn blog-btn" data-i18n="blogReadMore">Читать статью</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2 data-i18n="contactTitle">Контакты</h2>
+      <p data-i18n="contactIntro">Свяжитесь со мной удобным для вас способом:</p>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:lifeinastro.tg@gmail.com">lifeinastro.tg@gmail.com</a></li>
+        <li><i class="fa-brands fa-telegram"></i> <a href="https://t.me/lifeinastro" target="_blank" rel="noopener" data-i18n="telegramChannel">Пространство, где астрология помогает найти ответы</a></li>
+        <li><i class="fa-brands fa-telegram"></i> <a href="https://t.me/lifeinastro_bot" target="_blank" rel="noopener" data-i18n="telegramBot">Астробот: как задать вопрос и записаться</a></li>
+        <li><i class="fa-brands fa-telegram"></i> <a href="https://t.me/AstroSNai_bot" target="_blank" rel="noopener" data-i18n="telegramFunBot">Узнай, как реализовать свою мечту</a></li>
+        <li><i class="fa-brands fa-google"></i> <a href="https://forms.gle/uXqtAvbuG2G3pk5z7" target="_blank" rel="noopener" data-i18n="contactForm">Google‑форма для записи</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Life in Astro. <span data-i18n="footerRights">Все права защищены.</span></p>
+    <p><a href="#" data-i18n="privacyPolicy">Политика конфиденциальности</a> | <a href="#" data-i18n="termsOfUse">Условия использования</a></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <!-- Analytics placeholder: Insert your GA measurement ID in script.js -->
+</body>
+</html>
