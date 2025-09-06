@@ -1,9 +1,34 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a//dev/null b/package.json
-index 0000000000000000000000000000000000000000..4c6bf50f3f7a652f78771b77c22b62eeeb483efa 100644
---- a//dev/null
+diff --git a/package.json b/package.json
+index c36f2d7a30937fb8cfc851a76f493af1aa6d061e..4c6bf50f3f7a652f78771b77c22b62eeeb483efa 100644
+--- a/package.json
 +++ b/package.json
-@@ -0,0 +1,16 @@
+@@ -1,25 +1,16 @@
+- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-diff --git a//dev/null b/package.json
+-index 0000000000000000000000000000000000000000..4c6bf50f3f7a652f78771b77c22b62eeeb483efa 100644
+---- a//dev/null
+-+++ b/package.json
+-@@ -0,0 +1,16 @@
+-+{
+-+  "name": "astrolending",
+-+  "version": "1.0.0",
+-+  "description": "лендинг GPT",
+-+  "main": "script.js",
+-+  "scripts": {
+-+    "test": "node tests/setLanguage.test.js"
+-+  },
+-+  "keywords": [],
+-+  "author": "",
+-+  "license": "ISC",
+-+  "type": "commonjs",
+-+  "devDependencies": {
+-+    "jsdom": "^26.1.0"
+-+  }
+-+}
+- 
+-EOF
+-)
 +{
 +  "name": "astrolending",
 +  "version": "1.0.0",
