@@ -1,0 +1,10 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/.gitignore
+index 0000000000000000000000000000000000000000..3c3629e647f5ddf82548912e337bea9826b434af 100644
+--- a//dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++node_modules
+ 
+EOF
+)
